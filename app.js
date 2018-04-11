@@ -62,10 +62,8 @@ router.post('/authenticate', function(req, res) {
 
 // route middleware to verify a token
 app.use(function(req, res, next) {
-  console.log("Validating token")
   // check header or url parameters or post parameters for token
   var token = req.body.token || req.query.token || req.headers.token;
-  console.log("token "+token)
   // decode token
   if (token) {
 
