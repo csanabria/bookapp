@@ -8,9 +8,10 @@ var
   indexRouter = require('./routes/index'),
   usersRouter = require('./routes/users'),
   booksRouter = require('./routes/books'),
-  jwt    = require('jsonwebtoken'), // used to create, sign, and verify tokens
+  jwt    = require('jsonwebtoken'),
   router = express.Router();
   app = express(),
+  db = require('./app/utilities/db'),
   User = require('./app/models/user');
 
 // view engine setup

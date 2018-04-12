@@ -28,8 +28,6 @@ bookSchema.pre('save', function(next) {
   next();
 });
 
-mongoose.connect('mongodb://localhost/bookapp');
-
 // the schema is useless so far
 // we need to create a model using it
 var Book = mongoose.model('Book', bookSchema);
